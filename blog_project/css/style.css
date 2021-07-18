@@ -1,0 +1,98 @@
+.navbar {
+    background-color: cornflowerblue;
+}
+
+footer {
+    background-color: #333333;
+    color: bisque;
+    text-align: center;
+    height: 70px;
+    font-size: 1em;
+}
+
+#deleted {
+    margin-left: 600px;
+}
+
+#register {
+    border: solid 1px cornflowerblue;
+    height: 400px;
+    width: 500px;
+    margin-top: 50px;
+    padding-top: 15px;
+}
+
+.nav-tabs>.active>a,
+.nav-tabs>.active>a:hover,
+.nav-tabs>.active>a:focus {
+    border-color: #d45500;
+    border-bottom-color: transparent;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #d45500;
+}
+
+#signup {
+    width: 300px;
+    margin-left: 5rem;
+    margin-top: 1rem;
+}
+
+#post {
+    width: 300px;
+    margin-left: 5rem;
+    margin-top: 1rem;
+}
+
+#login {
+    width: 300px;
+    margin-left: 5rem;
+    margin-top: 1rem;
+}
+
+#posting {
+    padding-top: 15px;
+    padding-bottom: 30px;
+    margin-top: 70px;
+    background-color: #333333;
+    border-radius: 20px;
+    margin-bottom: 300px;
+}
+
+img {
+    margin-top: 30px;
+    border-bottom: solid 4px cornflowerblue;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border-radius: 20px;
+}
+
+h4 {
+    border-bottom: solid 1px cornflowerblue;
+    width: 50%;
+    color: bisque;
+    text-align: center;
+    padding-bottom: 3px;
+    font-family: DauphinPlain;
+    margin-top: 10px;
+}
+
+#posting p {
+    border-bottom: solid 1px cornflowerblue;
+    color: white;
+    font-family: 'Open Sans', Arial, sans-serif;
+    text-align: center;
+    text-align: justify;
+    letter-spacing: 3px;
+    text-indent: 50px;
+    padding-bottom: 30px;
+    margin-right: 10px;
+    margin-left: 200px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    float: inline-end;
+    border-bottom: solid 1px cornflowerblue;
+}
