@@ -60,6 +60,33 @@ footer {
     margin-bottom: 300px;
 }
 
+#about {
+    padding-top: 15px;
+    padding-bottom: 30px;
+    margin-top: 70px;
+    background-color: #333333;
+    border-radius: 20px;
+    margin-bottom: 300px;
+    height: 700px;
+}
+
+#about p {
+    border-bottom: solid 1px cornflowerblue;
+    color: white;
+    font-family: 'Open Sans', Arial, sans-serif;
+    text-align: center;
+    text-align: justify;
+    letter-spacing: 3px;
+    text-indent: 50px;
+    padding-bottom: 30px;
+    margin-right: 10px;
+    margin-left: 200px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    float: inline-end;
+    border-bottom: solid 1px cornflowerblue;
+}
+
 img {
     margin-top: 30px;
     border-bottom: solid 4px cornflowerblue;
