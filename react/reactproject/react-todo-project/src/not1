@@ -1,0 +1,152 @@
+APP
+
+
+
+
+
+<
+            input type = "button"
+            value = "ADD A TODO"
+            onClick = {
+                () => this.props.add(this.state.title)
+            }
+            /> 
+]]]---------------------
+<
+            h2 > Create a Todo < /h2>      <
+            input type = "text"
+            name = "sal"
+            onChange = { this.handleChange }
+            />  <
+            input type = "button"
+            value = "ADD A TODO"
+            onClick = {
+                () => this.props.add(this.state.sal)
+            }
+            />   <
+            h2 > Todo List < /h2>      
+
+------------
+
+import logo from './logo.svg';
+import './App.css';
+
+import React, { Component } from 'react'
+import { connect } from 'react-redux';
+import Child1 from './Child1'
+
+class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { sal: 0 }
+    }
+    handleChange = (event) => {
+        this.setState({
+            [event.target.name]: event.target.value
+        });
+    }
+
+
+    render() {
+        return ( <
+            div > { <
+                h2 > React with Redux < /h2>   
+                Salary <
+                input type = "text"
+                name = "sal"
+                onChange = { this.handleChange }
+                /><br/ >
+                <
+                input type = "button"
+                value = "increment Salary"
+                onClick = {
+                    () => this.props.increment(this.state.sal)
+                }
+                /> <
+                input type = "button"
+                value = "decrement Salary"
+                onClick = {
+                    () => this.props.decrement(this.state.sal)
+                }
+                /><br/ >
+
+                <
+                h3 > Global State varible < /h3> <
+                p > ID is { this.props.ids },
+                Name is { this.props.names },
+                Salary is { this.props.salarys } < /p>  <
+                /
+
+                div >
+            )
+        }
+    }
+
+    const mapStateToProps = (state) => {
+        return {
+            ids: state.id,
+            names: state.name,
+            salarys: state.salary
+        }
+    }
+
+    const mapDispatchToProps = (dispatch) => {
+        return {
+            increment: (sal) => dispatch({ type: "INCREMENT", payload: sal }),
+            decrement: (sal) => dispatch({ type: "DECREMENT", payload: sal })
+        }
+    }
+
+    export default connect(mapStateToProps, mapDispatchToProps)(App); // connect app component to store
+
+    ------------------------------------------------
+    reduce
+    const initialState = {
+    id: 100,
+    name: "Mona",
+    salary: 14000
+}
+
+export default function reducer(state = initialState, action) {
+    //change thr state base upon the action
+    //console.log(action);
+    let newState = {...state }; //using spred operator create the copy of state cariable in redux stateis immutablles
+
+    switch (action.type) {
+        case "INCREMENT":
+            newState.salary = newState.salary + eval(action.payload);
+            break;
+        case "DECREMENT":
+            newState.salary = newState.salary - eval(action.payload);
+            break;
+    }
+    return newState;
+}
+-----------------------
+index.js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux'; // Provider enable store feature to React Application
+import reducer from './reducer'; // reducer function imported.
+import { createStore } from 'redux'; //import createStore function from redux
+const myStore = createStore(reducer); //connect reducer function to store  and assign to myStore varible.
+//connect store ie myStore with provider tag to enable store feature to React Application
+ReactDOM.render( <
+    Provider store = { myStore } >
+    <
+    React.StrictMode >
+    <
+    App / >
+    <
+    /React.StrictMode>   <
+    /Provider>,
+    document.getElementById('root')
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
