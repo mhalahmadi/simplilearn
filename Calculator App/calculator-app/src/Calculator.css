@@ -1,0 +1,29 @@
+.cal{
+    font-size:x-large;
+    font-weight: 300;
+    height: 400px;
+    width: 332px ;
+    padding: 10px;
+    border: 0.3px solid blanchedalmond;
+    background-color:black;
+}
+
+input{   
+    width: 232px;
+    height: 74px;
+    font-size:x-large;
+}
+
+button{
+    font-size:x-large;
+    height: 80px; 
+    width: 80px;
+}
+button:hover{
+    color: hotpink;
+}
+
+
+#cal{
+    background-color: chocolate;
+}
